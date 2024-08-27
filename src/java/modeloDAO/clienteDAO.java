@@ -27,13 +27,13 @@ public class clienteDAO implements CRUD{
             rs=ps.executeQuery();
             while (rs.next()) {
                 cliente clie = new cliente();
-                clie.setId(rs.getInt("id"));
-                clie.setNom(rs.getString("nombre"));
-                clie.setApell(rs.getString("apellido"));
-                clie.setEdad(rs.getInt("edad"));
-                clie.setGenero(rs.getString("genero"));
-                clie.setTelef(rs.getInt("telefono"));
-                clie.setEmail(rs.getString("email"));
+                clie.setId(rs.getInt("id_cliente"));
+                clie.setNom(rs.getString("nom_cliente"));
+                clie.setApell(rs.getString("apell_cliente"));
+                clie.setEdad(rs.getInt("edad_cliente"));
+                clie.setGenero(rs.getString("genero_cliente"));
+                clie.setTelef(rs.getInt("telef_cliente"));
+                clie.setEmail(rs.getString("email_cliente"));
                 list.add(clie); 
                 
             }

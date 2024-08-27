@@ -11,9 +11,9 @@ import java.sql.SQLException;
 
 public class conexionBD {
     /*se esta haciendo la coneccion a la base de datos **/
-    private static Connection conexion;
+    /*private static Connection conexion;
     private static PreparedStatement sentenciapreparada;
-    private static ResultSet resultado;
+    private static ResultSet resultado;*/
     
  public static Connection conectarDB() {
         Connection con;//esta variable almacenara la informacion

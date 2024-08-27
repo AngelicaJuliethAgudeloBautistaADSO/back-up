@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/backup_proyecto/agendar_citas_spa/src/java/confing/conexionBD.java</file>
-            <file>file:/D:/backup_proyecto/agendar_citas_spa/src/java/confing/MetodosSQL.java</file>
-            <file>file:/D:/backup_proyecto/agendar_citas_spa/src/java/controlador/controlador.java</file>
-            <file>file:/D:/backup_proyecto/agendar_citas_spa/web/registro.jsp</file>
-            <file>file:/D:/backup_proyecto/agendar_citas_spa/src/java/controlador/Guardar.java</file>
+            <file>file:/C:/Users/Propietario/Documents/NetBeansProjects/agendar_citas_spa/back-up/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Propietario/Documents/NetBeansProjects/agendar_citas_spa/back-up/src/java/modeloDAO/MetodosSQL.java</file>
+            <file>file:/C:/Users/Propietario/Documents/NetBeansProjects/agendar_citas_spa/back-up/src/java/controlador/controlador.java</file>
+            <file>file:/C:/Users/Propietario/Documents/NetBeansProjects/agendar_citas_spa/back-up/src/java/controlador/Guardar.java</file>
         </group>
     </open-files>
 </project-private>

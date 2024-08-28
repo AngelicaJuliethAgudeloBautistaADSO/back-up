@@ -16,7 +16,7 @@
     <div class="contenedor">
         <aside class="contenedor_lateral">
             <div class="cont_logo">
-                <img src="imagenes/logo.png" alt="">
+                <img src="../img/logo.png" alt="">
                 <p>Cosmetología y Estética Integral</p>
             </div>
             <button class="boton_logo">
@@ -24,19 +24,22 @@
             </button>
             <nav class="nav_logo">
                 <button class="button_nav_logo" >
-                    <a href="">Panel de inicio</a>
+                    <a href="panel_inicio_admin.jsp">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cosmetologo_admin.html">Cosmetologo/a</a>
+                    <a href="panel_cosmetologo_admin.jsp">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="">Calendario</a>
+                    <a href="panel_calendario_admin.jsp">Calendario</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="">Citas</a>
+                    <a href="panel_cita_admin.jsp">Citas</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="">Usuarios</a>
+                    <a href="panel_usuarios_admin.jsp">Usuarios</a>
+                </button>
+                <button class="button_nav_logo" >
+                    <a href="panel_servicios_admin.jsp">Servicios</a>
                 </button>
             </nav>
         </aside>

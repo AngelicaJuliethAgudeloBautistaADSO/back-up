@@ -1,6 +1,6 @@
 <%-- 
-    Document   : panel_calendario_admin
-    Created on : 17/08/2024, 7:37:20 p. m.
+    Document   : panel_citas_admin
+    Created on : 27/08/2024, 7:34:46 p. m.
     Author     : angel
 --%>
 
@@ -10,13 +10,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="../css/css_admin/panel_calendario_admin.css"/>
+        <link rel="stylesheet" href="../css/css_admin/panel_citas_admin.css"/>
     </head>
     <body>
     <div class="contenedor">
         <aside class="contenedor_lateral">
             <div class="cont_logo">
-                <img src="../img/logo.png" alt="">
+                <img src="../imagenes/logo.png" alt="">
                 <p>Cosmetología y Estética Integral</p>
             </div>
             <button class="boton_logo">
@@ -24,47 +24,37 @@
             </button>
             <nav class="nav_logo">
                 <button class="button_nav_logo" >
-                    <a href="panel_inicio_admin.jsp">Panel de inicio</a>
+                    <a href="panel_inicio_admin.html">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cosmetologo_admin.jsp">Cosmetologo/a</a>
+                    <a href="panel_cosmetologo_admin.html">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_calendario_admin.jsp">Calendario</a>
+                    <a href="panel_calendario_admin.html">Calendario</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cita_admin.jsp">Citas</a>
+                    <a href="panel_cita_admin.html">Citas</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_usuarios_admin.jsp">Usuarios</a>
+                    <a href="panel_usuarios_admin.html">Usuarios</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_servicios_admin.jsp">Servicios</a>
+                    <a href="panel_servicios_admin.html">Servicios</a>
                 </button>
             </nav>
         </aside>
         <main class="cont_logo">
             <div class="panel">
                 <div class="contenido_principal">
-                    <h2 class="h2_principal">Administrador de horarios</h2>
-                    <p class="p_principal">Calendario de sesion</p>
-                    <button class="boton_panel">
-                        <a href="">+ Agregar nueva sesion</a>
-                    </button>
-                    <label for="fecha">Fecha:</label>
-                    <input class="boton_panel" type="date" id="fecha" placeholder="dd / mm / aaaa">
-                    
-                    <label for="doctor">Doctor:</label>
-                    <select class="boton_panel" id="doctor">
-                        <option value="" disabled selected>Escoge el nombre del doctor</option>
-                    </select>
+                    <h2 class="h2_principal">Citas</h2>
                     <table class="tabla_principal">
                         <thead class="thead_tabla">
                             <tr class="tr_tabla">
-                                <th class="th_tabla">Servicio</th>
-                                <th class="th_tabla">Cosmetolog@</th>
+                                <th class="th_tabla">Codigo</th>
+                                <th class="th_tabla">ID cliente</th>
+                                <th class="th_tabla">ID Cosmetolog@</th>
                                 <th class="th_tabla">Fecha y hora</th>
-                                <th class="th_tabla">Servicio</th>
+                                <th class="th_tabla">Codigo Servicio</th>
                                 <th class="th_tabla">Acciones</th>
                                 <!-- <td>
                                     <div class="boton_modif_elim">

@@ -57,7 +57,7 @@
             <label for="contrasena"></label>
             <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" autocomplete="off">
             
-            <button type="summit" id="summit">Registrarse</button>    
+            <button type="submit" id="submit">Registrarse</button>    
         </form>
         <script src="inicio.js"></script>
         <div class="login-link">

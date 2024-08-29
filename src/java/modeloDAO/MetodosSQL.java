@@ -16,7 +16,7 @@ import java.sql.SQLException;
  */
 public class MetodosSQL {
 
-    private Connection conexion;
+   /* private Connection conexion;
     private PreparedStatement sentenciaPreparada;
     private ResultSet resultado;
 
@@ -60,5 +60,5 @@ public class MetodosSQL {
         }
         //System.out.println("valor del registro: " + registro);
         return registro;
-    }
+    }*/
 }

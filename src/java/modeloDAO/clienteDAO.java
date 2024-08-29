@@ -7,39 +7,47 @@ import interfaces.CRUD;
 import java.util.List;
 import modelo.cliente;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.sql.SQLException;
 
 public class clienteDAO implements CRUD{
-    conexionBD cn=new conexionBD();
-    Connection con;
-    PreparedStatement ps;
-    ResultSet rs;
-    cliente clien=new cliente();
-     
+    
+    public boolean registrar(cliente cliente) {
+        Connection conexion = conexionBD.conectarDB();
+        String sql = "INSERT INTO clientes (nombre, apellidos, correo, genero, tipo, documento, edad, telefono, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try {
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setString(1, cliente.getNombre());
+            ps.setString(2, cliente.getApellidos());
+            ps.setString(3, cliente.getCorreo());
+            ps.setString(4, cliente.getGenero());
+            ps.setString(5, cliente.getTipo());
+            ps.setInt(6, cliente.getDocumento());
+            ps.setInt(7, cliente.getEdad());
+            ps.setInt(8, (int) cliente.getTelefono());
+            ps.setString(9, cliente.getContrasena());
+
+            int filasAfectadas = ps.executeUpdate();
+
+            return filasAfectadas > 0;
+
+        } catch (SQLException e) {
+            System.out.println("Error al registrar cliente: " + e.getMessage());
+            return false;
+        } finally {
+            try {
+                if (conexion != null) {
+                    conexion.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
     @Override
     public List listar() {
-        ArrayList<cliente>list=new  ArrayList<>();
-        String sql="selec * from cliente";
-        try {
-            con=cn.getonnection();
-            ps=con.prepareStatement(sql);
-            rs=ps.executeQuery();
-            while (rs.next()) {
-                cliente clie = new cliente();
-                clie.setId(rs.getInt("id_cliente"));
-                clie.setNom(rs.getString("nom_cliente"));
-                clie.setApell(rs.getString("apell_cliente"));
-                clie.setEdad(rs.getInt("edad_cliente"));
-                clie.setGenero(rs.getString("genero_cliente"));
-                clie.setTelef(rs.getInt("telef_cliente"));
-                clie.setEmail(rs.getString("email_cliente"));
-                list.add(clie); 
-                
-            }
-        } catch (Exception e) {
-        }
-        return list;
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override

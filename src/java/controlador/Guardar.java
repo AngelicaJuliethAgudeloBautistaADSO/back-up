@@ -4,13 +4,14 @@
  */
 package controlador;
 
-import modeloDAO.MetodosSQL;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.cliente;
+import modeloDAO.clienteDAO;
 
 /**
  *
@@ -18,53 +19,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Guardar extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-            /* TODO output your page here. You may use following sample code. */
-           /* MetodosSQL metodos = new MetodosSQL();
-            
-            String nombre = request.getParameter("nombre");
-            String apellidos = request.getParameter("apellidos");
-            String correo = request.getParameter("correo");
-            String genero = request.getParameter("genero");
-            String tipo = request.getParameter("tipo");
-            int documento = Integer.parseInt(request.getParameter("documento"));
-            int edad = Integer.parseInt(request.getParameter("edad"));
-            int telefono = Integer.parseInt(request.getParameter("telefono"));
-            String contrasena = request.getParameter("contrasena");
-            
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<body>");
-            out.println("<script type=\"text/javascript\">");
-            
-            boolean registro=metodos.registrarUsuario(edad, nombre, apellidos, documento, genero, telefono, apellidos, contrasena);
-            
-            if (registro==true) {
-                out.println("alert('el usuario se ha registrado con exito')");
-                out.println("location ='registro.jsp'");
-            }else{
-                out.println("alert('Error: el usuario NO se ha registrado')");
-                out.println("location ='registro.jsp'");
-            }
-            System.out.println("el valor de registro en servlet es:" + registro);
-            
-            out.println("</script>");
-            out.println("</body>");
-            out.println("</html>");**/
-       
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -94,6 +53,39 @@ public class Guardar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        String nomb = request.getParameter("nombre");
+        String apell = request.getParameter("apellidos");
+        String email = request.getParameter("correo");
+        String genero = request.getParameter("genero");
+        String tipo = request.getParameter("tipo");
+        int id = Integer.parseInt(request.getParameter("documento"));
+        int edad = Integer.parseInt(request.getParameter("edad"));
+        long telef = Long.parseLong(request.getParameter("telefono"));
+        String contrasena = request.getParameter("contrasena");
+        
+        
+        
+        cliente cliente = new cliente();
+        cliente.setNombre(nomb);
+        cliente.setApellidos(apell);
+        cliente.setCorreo(email);
+        cliente.setGenero(genero);
+        cliente.setTipo(tipo);
+        cliente.setDocumento(id);
+        cliente.setEdad(edad);
+        cliente.setTelefono(telef);
+        cliente.setContrasena(contrasena);
+        
+        
+        clienteDAO clienteDao = new clienteDAO();
+        boolean registrado = clienteDao.registrar(cliente);
+
+        if (registrado) {
+            response.sendRedirect("ingreso.jsp"); // Redirigir al login después del registro exitoso
+        } else {
+            response.sendRedirect("registro.jsp?error=true"); // Redirigir al registro en caso de error
+        }
     }
 
     /**

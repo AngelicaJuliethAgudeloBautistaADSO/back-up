@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class controlador extends HttpServlet {
-    String listar="../vistas/listar.jsp";
+   /* String listar="../vistas/listar.jsp";
     String add="../vistas/add.jsp";
-    String edit="../vistas/edit.jsp";
+    String edit="../vistas/edit.jsp";*/
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -57,13 +57,13 @@ public class controlador extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String acceso ="";
+       /* String acceso ="";
         String accion = request.getParameter("accion");
         if (accion.equalsIgnoreCase("listar")) {
           acceso=listar;
         }
         RequestDispatcher vista=request.getRequestDispatcher(acceso);
-        vista.forward(request, response);
+        vista.forward(request, response);*/
     }
 
 

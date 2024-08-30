@@ -30,7 +30,8 @@
             <label id="avisocontrasena">------</label>
             
             <button type="summit" id="summit" >
-                <a href="panel_admin/panel_inicio_admin.jsp">
+                <a href="panel_usuario/panel_inicio_usuario.jsp">
+                    <%--panel_admin/panel_inicio_admin.jsp--%>
                    Ingresar 
                 </a>
             </button>    

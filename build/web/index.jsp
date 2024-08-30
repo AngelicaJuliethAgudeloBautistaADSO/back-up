@@ -40,9 +40,7 @@
                 <button class="bott_contacto">
                     <a href="registro.jsp">Registrarme</a>
                 </button>
-                <button >
-                    <a href="controlador?accion=listar">listar</a>
-                </button>
+                
             </div>
         </div>
         

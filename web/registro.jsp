@@ -57,7 +57,11 @@
             <label for="contrasena"></label>
             <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" autocomplete="off">
             
-            <button type="submit" id="submit">Registrarse</button>    
+            <button type="submit" id="submit">
+                <a href="panel_admin/panel_inicio_admin.jsp">
+                    Registrarse
+                </a>
+            </button>    
         </form>
         <script src="inicio.js"></script>
         <div class="login-link">

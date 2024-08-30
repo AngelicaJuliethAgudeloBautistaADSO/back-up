@@ -16,7 +16,7 @@
 body{
     background: var(--primary-color);
     font-family: "Montserrat", sans-serif;
-    background-image: linear-gradient(62deg, #d7f7f585 0%, #d7f7f5a1 100%) , url(img/fondo_registro.png);
+    background-image: linear-gradient(62deg, #d7f7f585 0%, #d7f7f5a1 100%) , url(../img/fondo_registro.png);
     background-repeat: no-repeat;
     background-size: cover;
 }

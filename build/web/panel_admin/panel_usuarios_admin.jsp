@@ -4,6 +4,10 @@
     Author     : angel
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="modelo.cliente"%>
+<%@page import="modeloDAO.clienteDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -53,21 +57,40 @@
                                 <th class="th_tabla">ID</th>
                                 <th class="th_tabla">Nombre</th>
                                 <th class="th_tabla">Apellido</th>
-                                <th class="th_tabla">Edad</th>
+                                <th class="th_tabla">Documento</th>
                                 <th class="th_tabla">Genero</th>
                                 <th class="th_tabla">Telefono</th>
                                 <th class="th_tabla">Email</th>
                                 <th class="th_tabla">Acciones</th>
-                                <!-- <td>
-                                    <div class="boton_modif_elim">
-                                        <button class="modificar">Modificar</button>
-                                        <button class="eliminar">Eliminar</button>
-                                    </div>
-                                </td>  -->
                             </tr>
                         </thead>
+                        
+                        
                         <tbody>
-                            
+                        <%
+                        clienteDAO dao=new clienteDAO();
+                        List<cliente>list=dao.listar();
+                        Iterator<cliente>iter=list.iterator();
+                        cliente clie=null;
+                        while (iter.hasNext()) {                        
+                        clie=iter.next();
+                        %>
+                            <tr>
+                                <td class="th_tabla"><%= clie.getId()%></td>
+                                <td class="th_tabla"><%= clie.getNom()%></td>
+                                <td class="th_tabla"><%= clie.getApell()%></td>
+                                <td class="th_tabla"><%= clie.getDocument()%></td>
+                                <td class="th_tabla"><%= clie.getGenero()%></td>
+                                <td class="th_tabla"><%= clie.getTelef()%></td>
+                                <td class="th_tabla"><%= clie.getEmail()%></td>
+                                <td class="th_tabla">
+                                    <div class="boton_modif_elim">
+                                        <a class="modificar">Modificar</a>
+                                        <a class="eliminar">Eliminar</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <%}%>
                         </tbody>
                     </table>
                 </div>

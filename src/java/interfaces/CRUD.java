@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public interface CRUD {
-    public List listar();
+    public List<cliente> listar();
     public cliente list (int id);
     public boolean add(cliente clie);
     public boolean edit(cliente clie);

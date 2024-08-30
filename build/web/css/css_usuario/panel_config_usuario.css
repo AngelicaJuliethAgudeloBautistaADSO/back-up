@@ -119,8 +119,7 @@ input , select{
 }
 label {
     font-size: var(--font-size);
-    margin-top: 20px;
-    padding: 15px 70px;
+    margin-top: 15px;
 }
 select{
     padding: 15px 70px;

@@ -2,41 +2,100 @@
 package modelo;
 
 public class cliente {
-private String nom;
-    private String apell;
-    private String email;
-    private String genero;
-    private String tipo;
-    private int id;
-    private int edad;
-    private long telef;
-    private String contrasena;
+    int id;
+    String nom;
+    String apell;
+    int document;
+    String email;
+    String genero;
+    String tipo;
+    long telef;
+    String contrasena;
+    public cliente() {
+    }
 
-    public String getNombre() { return nom; }
-    public void setNombre(String nom) { this.nom = nom; }
+    public cliente(int id, String nom, String apell, int document, String email, String genero, String tipo, long telef, String contrasena) {
+        this.id = id;
+        this.nom = nom;
+        this.apell = apell;
+        this.document = document;
+        this.email = email;
+        this.genero = genero;
+        this.tipo = tipo;
+        this.telef = telef;
+        this.contrasena = contrasena;
+    }
 
-    public String getApellidos() { return apell; }
-    public void setApellidos(String apell) { this.apell = apell; }
+    public int getId() {
+        return id;
+    }
 
-    public String getCorreo() { return email; }
-    public void setCorreo(String email) { this.email = email; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getGenero() { return genero; }
-    public void setGenero(String genero) { this.genero = genero; }
+    public String getNom() {
+        return nom;
+    }
 
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-    public int getDocumento() { return id; }
-    public void setDocumento(int id) { this.id = id; }
+    public String getApell() {
+        return apell;
+    }
 
-    public int getEdad() { return edad; }
-    public void setEdad(int edad) { this.edad = edad; }
+    public void setApell(String apell) {
+        this.apell = apell;
+    }
 
-    public long getTelefono() { return telef; }
-    public void setTelefono(long telef) { this.telef = telef; }
+    public int getDocument() {
+        return document;
+    }
 
-    public String getContrasena() { return contrasena; }
-    public void setContrasena(String contrasena) { this.contrasena = contrasena; }
+    public void setDocument(int document) {
+        this.document = document;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public long getTelef() {
+        return telef;
+    }
+
+    public void setTelef(long telef) {
+        this.telef = telef;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
     
 }

@@ -41,7 +41,7 @@
 }
 /* inicio */
 .container_inicio{
-    background-image: url(img/inicio_fondo.jpg);
+    background-image: url(../img/inicio_fondo.jpg);
     opacity: 75%;
     background-size: cover;/*establece toada la imagen en un contenedor*/
     background-position: center; /*centra la imagen en el contenedor*/

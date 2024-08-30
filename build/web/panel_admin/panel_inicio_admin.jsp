@@ -36,7 +36,7 @@
                     <a href="panel_cita_admin.jsp">Citas</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_usuarios_admin.jsp">Usuarios</a>
+                    <a href="Controlador?accion=listar">Usuarios</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="panel_servicios_admin.jsp">Servicios</a>

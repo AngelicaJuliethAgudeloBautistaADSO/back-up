@@ -18,7 +18,7 @@
                         <th>ID</th>
                         <th>NOMBRE</th>
                         <th>APELLIDO</th>
-                        <th>EDAD</th>
+                        <th>DOCUMENTO</th>
                         <th>GENERO</th>
                         <th>TELEFONO</th>
                         <th>EMAIL</th>
@@ -39,7 +39,7 @@
                         <td><%= clie.getId()%></td>
                         <td><%= clie.getNom()%></td>
                         <td><%= clie.getApell()%></td>
-                        <td><%= clie.getEdad()%></td>
+                        <td><%= clie.getDocument()%></td>
                         <td><%= clie.getGenero()%></td>
                         <td><%= clie.getTelef()%></td>
                         <td><%= clie.getEmail()%></td>
@@ -48,7 +48,7 @@
                             <a>Remover</a>
                         </td>
                     </tr>
-                    <%%>
+                    <%}%>
                 </tbody>
             </table>
         </div>

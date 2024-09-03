@@ -2,7 +2,7 @@
 package modelo;
 
 public class cliente {
-    int id;
+    //int id;
     String nom;
     String apell;
     int document;
@@ -14,8 +14,8 @@ public class cliente {
     public cliente() {
     }
 
-    public cliente(int id, String nom, String apell, int document, String email, String genero, String tipo, long telef, String contrasena) {
-        this.id = id;
+    public cliente( String nom, String apell, int document, String email, String genero, String tipo, long telef, String contrasena) {
+        //this.id = id;
         this.nom = nom;
         this.apell = apell;
         this.document = document;
@@ -26,13 +26,13 @@ public class cliente {
         this.contrasena = contrasena;
     }
 
-    public int getId() {
-        return id;
-    }
+   // public int getId() {
+     //   return id;
+    //}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    //public void setId(int id) {
+    //    this.id = id;
+    //}
 
     public String getNom() {
         return nom;

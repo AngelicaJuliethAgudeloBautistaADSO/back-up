@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-        *** GENERATED FROM project.xml - DO NOT EDIT  ***
-        ***         EDIT ../build.xml INSTEAD         ***
-
-        For the purpose of easier reading the script
-        is divided into following sections:
-        - initialization
-        - compilation
-        - dist
-        - execution
-        - debugging
-        - javadoc
-        - test compilation
-        - test execution
-        - test debugging
-        - cleanup
-
-        -->
 <project xmlns:webproject1="http://www.netbeans.org/ns/web-project/1" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:webproject3="http://www.netbeans.org/ns/web-project/3" basedir=".." default="default" name="agendar_citas_spa-impl">
     <import file="ant-deploy.xml"/>
     <fail message="Please build using Ant 1.7.1 or higher.">
@@ -982,22 +964,12 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
-<<<<<<< HEAD
-        <copyfiles files="${libs.MySQL_connectors.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${libs.JDB__mysql_connector.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-=======
-        <copyfiles files="${libs.angelica.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> 452ff7ff39bdaf1dc092d9aeb3ebc993b13bade2
+        <copyfiles files="${libs.dbc_connector.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
-<<<<<<< HEAD
-        <copyfiles files="${libs.MySQL_connectors.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${libs.JDB__mysql_connector.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
-=======
-        <copyfiles files="${libs.angelica.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> 452ff7ff39bdaf1dc092d9aeb3ebc993b13bade2
+        <copyfiles files="${libs.dbc_connector.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>

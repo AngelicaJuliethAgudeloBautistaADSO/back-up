@@ -8,22 +8,25 @@ import java.sql.DriverManager;
 
 
 public class Conexion {
-
-    public static Connection conectarDB() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     Connection con;//esta variable almacenara la informacion
     
  public Conexion(){
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/base_datos_spa","root","");//se esta intentando realizar la conexion con los datos proporcionador (host, db, user, pss)
             System.out.println("conexion exitosa");//si la conexion a la base de datos es exitosa s imprimira un mesaje "conexion exitosa" en la consola
         } catch (Exception e) {
-            System.err.println("Error"+e);//se imprimira un mensaje de error
+            System.err.println("Error"+e.getMessage());//se imprimira un mensaje de error
         }
     }
         //public static void main(String[]args){
+           // Conexion conexion = new Conexion();
+           // if (conexion.getConnection() != null) {
+           // System.out.println("Conexión a la base de datos exitosa.");
+           // } else {
+          //      System.out.println("Error al conectar a la base de datos.");
+   // }
+      //  }
             //llamada al metodo conectarDB() para que se pueda establecer en la base de datos
             //Connection bd= conectarDB();
             

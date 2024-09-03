@@ -12,6 +12,11 @@
         <servlet-name>Guardar</servlet-name>
         <servlet-class>controlador.Guardar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controladorAdminUsuario</servlet-name>
+        <servlet-class>controlador.controladorAdminUsuario</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>controlador</servlet-name>
         <url-pattern>/controlador</url-pattern>
@@ -23,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>Guardar</servlet-name>
         <url-pattern>/GuardarRegistro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controladorAdminUsuario</servlet-name>
+        <url-pattern>/adminUserPath</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

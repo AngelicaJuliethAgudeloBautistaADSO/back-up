@@ -16,30 +16,30 @@
     <div class="contenedor">
         <aside class="contenedor_lateral">
             <div class="cont_logo">
-                <img src="../imagenes/logo.png" alt="">
+                <img src="../img/logo.png" alt="">
                 <p>Cosmetología y Estética Integral</p>
             </div>
             <button class="boton_logo">
-                <a href="index.html">Cerrar sesion</a>
+                <a href="../index.jsp">Cerrar sesion</a>
             </button>
             <nav class="nav_logo">
                 <button class="button_nav_logo" >
-                    <a href="panel_inicio_admin.html">Panel de inicio</a>
+                    <a href="panel_inicio_admin.jsp">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cosmetologo_admin.html">Cosmetologo/a</a>
+                    <a href="panel_cosmetologo_admin.jsp">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_calendario_admin.html">Calendario</a>
+                    <a href="panel_calendario_admin.jsp">Calendario</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cita_admin.html">Citas</a>
+                    <a href="panel_citas_admin.jsp">Citas</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_usuarios_admin.html">Usuarios</a>
+                    <a href="controlAdminUsuario?accion=listar">Usuarios</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_servicios_admin.html">Servicios</a>
+                    <a href="panel_servicios_admin.jsp">Servicios</a>
                 </button>
             </nav>
         </aside>

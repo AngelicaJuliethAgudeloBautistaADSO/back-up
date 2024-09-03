@@ -5,22 +5,19 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.cliente;
 import modeloDAO.clienteDAO;
 
-@WebServlet(name = "control_admin_usuario", urlPatterns = {"/control_admin_usuario"})
-public class controlAdminUsuario extends HttpServlet {
 
+public class contolUsuario extends HttpServlet {
     String listar="panel_admin/panel_usuarios_admin.jsp";
     String add="vistas/add.jsp";
     String edit="vistas/edit.jsp";
     cliente c =new cliente();//se instancia la clase cliente
     clienteDAO dao=new clienteDAO();
-    
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,19 +27,20 @@ public class controlAdminUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet control_admin_usuario</title>");
+            out.println("<title>Servlet contolUsuario</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet control_admin_usuario at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet contolUsuario at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
     }
 
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            String acceso="";
+        String acceso="";
             String action=request.getParameter("accion");
             if (action.equalsIgnoreCase("listar")) {
                 acceso=listar;
@@ -79,12 +77,25 @@ public class controlAdminUsuario extends HttpServlet {
             vista.forward(request, response);
     }
 
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";

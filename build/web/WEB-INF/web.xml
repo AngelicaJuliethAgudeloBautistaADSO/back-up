@@ -16,7 +16,14 @@
         <servlet-name>controladorAdminUsuario</servlet-name>
         <servlet-class>controlador.controladorAdminUsuario</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>controlCosmetolo</servlet-name>
+        <servlet-class>controlador.controlCosmetolo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>contolUsuario</servlet-name>
+        <servlet-class>controlador.contolUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>controlador</servlet-name>
         <url-pattern>/controlador</url-pattern>
@@ -32,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>controladorAdminUsuario</servlet-name>
         <url-pattern>/adminUserPath</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlCosmetolo</servlet-name>
+        <url-pattern>/controlCosmetolo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contolUsuario</servlet-name>
+        <url-pattern>/contolUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

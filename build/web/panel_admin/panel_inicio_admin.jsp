@@ -27,7 +27,7 @@
                     <a href="panel_inicio_admin.jsp">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cosmetologo_admin.jsp">Cosmetologo/a</a>
+                    <a href="controladorCosmetologo?accion=listarCosmetologo">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="panel_calendario_admin.jsp">Calendario</a>

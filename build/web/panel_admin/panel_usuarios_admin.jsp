@@ -80,7 +80,6 @@
                         clie = iter.next();                        
                         %>
                             <tr>
-                                <td class="th_tabla"><%= clie.getId()%></td>
                                 <td class="th_tabla"><%= clie.getNom()%></td>
                                 <td class="th_tabla"><%= clie.getApell()%></td>
                                 <td class="th_tabla"><%= clie.getDocument()%></td>

@@ -27,7 +27,7 @@
                     <a href="panel_inicio_admin.jsp">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="panel_cosmetologo_admin.jsp">Cosmetologo/a</a>
+                    <a href="controladorCosmetologo?accion=listarCosmetologo">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="panel_calendario_admin.jsp">Calendario</a>
@@ -55,13 +55,24 @@
                             <tr class="tr_tabla">
                                 <th class="th_tabla">Id</th>
                                 <th class="th_tabla">Nombre</th>
+                                <th class="th_tabla">Apellido</th>
                                 <th class="th_tabla">Telefono</th>
                                 <th class="th_tabla">Especialidad</th>
-                                <th class="th_tabla">Disponibilidad</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            <tr>
+                                <td class=""></td>
+                                <td class=""></td>
+                                <td class=""></td>
+                                <td class=""></td>
+                                <td class="">
+                                    <div class="">
+                                        <a class="">Modificar</a>
+                                        <a class="">Eliminar</a>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

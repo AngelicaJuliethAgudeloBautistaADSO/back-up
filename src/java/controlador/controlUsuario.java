@@ -1,4 +1,3 @@
-
 package controlador;
 
 import java.io.IOException;
@@ -12,8 +11,8 @@ import modelo.cliente;
 import modeloDAO.clienteDAO;
 
 
-public class contolUsuario extends HttpServlet {
-    String listar="panel_admin/panel_usuarios_admin.jsp";
+public class controlUsuario extends HttpServlet {
+    String listar="panel_usuarios_admin.jsp";
     String add="vistas/add.jsp";
     String edit="vistas/edit.jsp";
     cliente c =new cliente();//se instancia la clase cliente
@@ -77,25 +76,12 @@ public class contolUsuario extends HttpServlet {
             vista.forward(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

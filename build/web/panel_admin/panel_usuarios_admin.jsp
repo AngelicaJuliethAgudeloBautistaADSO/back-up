@@ -1,9 +1,3 @@
-<%-- 
-    Document   : panel_usuarios_admin
-    Created on : 27/08/2024, 7:35:36 p. m.
-    Author     : angel
---%>
-
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="modelo.cliente"%>

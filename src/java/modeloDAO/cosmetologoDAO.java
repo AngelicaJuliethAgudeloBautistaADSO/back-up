@@ -32,7 +32,7 @@ public class cosmetologoDAO implements CRUD_cosmetologo{
                 cosmet.setApell_cosmetolo(rs.getString("apell_cosmetolo"));
                 cosmet.setTelef_cosmetolo(rs.getInt("telef_cosmetolo"));
                 cosmet.setEspeci_cosmetolo(rs.getString("especi_cosmetolo"));
-                list.add(cosm);
+                list.add(cosmet);
             }
         } catch (Exception e) {
         }

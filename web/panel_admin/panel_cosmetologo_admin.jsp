@@ -1,9 +1,7 @@
-<%-- 
-    Document   : panel_cosmetologo_admin
-    Created on : 17/08/2024, 7:36:59 p. m.
-    Author     : angel
---%>
-
+<%@page import="modelo.cosmetologo"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="modeloDAO.cosmetologoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -27,7 +25,7 @@
                     <a href="panel_inicio_admin.jsp">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="controladorCosmetologo?accion=listarCosmetologo">Cosmetologo/a</a>
+                    <a href="controlCosmetolo?accion=listar">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="panel_calendario_admin.jsp">Calendario</a>
@@ -48,7 +46,7 @@
                 <div class="contenido_principal">
                     <h2 class="h2_principal">Agregar nuevo cosmetologo </h2>
                     <button class="boton_panel">
-                        <a href="">+ Agregar nuevo</a>
+                        <a href="agregarCosmetol_admin.jsp">+ Agregar nuevo</a>
                     </button>
                     <table class="tabla_principal">
                         <thead class="thead_tabla">
@@ -60,12 +58,24 @@
                                 <th class="th_tabla">Especialidad</th>
                             </tr>
                         </thead>
+                        
+                        
                         <tbody>
+                        <%
+                            cosmetologoDAO dao=new cosmetologoDAO();
+                            List<cosmetologo>list=dao.listar();
+                            Iterator<cosmetologo>iter=list.iterator();
+                            cosmetologo cosm=null;
+                            while (iter.hasNext()) {
+                                    cosm=iter.next();
+                                
+                        %>
                             <tr>
-                                <td class=""></td>
-                                <td class=""></td>
-                                <td class=""></td>
-                                <td class=""></td>
+                                <td class=""><%= cosm.getId_cosmetolo()%></td>
+                                <td class=""><%= cosm.getNom_cosmetolo() %></td>
+                                <td class=""><%= cosm.getApell_cosmetolo() %></td>
+                                <td class=""><%= cosm.getTelef_cosmetolo() %></td>
+                                <td class=""><%= cosm.getEspeci_cosmetolo()%></td>
                                 <td class="">
                                     <div class="">
                                         <a class="">Modificar</a>
@@ -73,6 +83,7 @@
                                     </div>
                                 </td>
                             </tr>
+                         <%}%>
                         </tbody>
                     </table>
                 </div>

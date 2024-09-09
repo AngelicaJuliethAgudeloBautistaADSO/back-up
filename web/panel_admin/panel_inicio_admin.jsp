@@ -27,7 +27,7 @@
                     <a href="panel_inicio_admin.jsp">Panel de inicio</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="controladorCosmetologo?accion=listarCosmetologo">Cosmetologo/a</a>
+                      <a href="controlCosmetolo?accion=listar">Cosmetologo/a</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="panel_calendario_admin.jsp">Calendario</a>
@@ -36,7 +36,7 @@
                     <a href="panel_citas_admin.jsp">Citas</a>
                 </button>
                 <button class="button_nav_logo" >
-                    <a href="controlAdminUsuario?accion=listar">Usuarios</a>
+                    <a href="controlUsuario?accion=listar">Usuarios</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="controlador?accion=listar">Servicios</a>

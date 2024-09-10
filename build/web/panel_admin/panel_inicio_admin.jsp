@@ -1,8 +1,3 @@
-<%-- 
-    Document   : panel_inicio_admin
-    Created on : 17/08/2024, 7:36:26 p. m.
-    Author     : angel
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -35,8 +30,8 @@
                 <button class="button_nav_logo" >
                     <a href="panel_citas_admin.jsp">Citas</a>
                 </button>
+                    <a href="controlAdminUsuario?accion=listar">ususususu</a>
                 <button class="button_nav_logo" >
-                    <a href="controlAdminUsuario?accion=listar">Usuarios</a>
                 </button>
                 <button class="button_nav_logo" >
                     <a href="controlador?accion=listar">Servicios</a>

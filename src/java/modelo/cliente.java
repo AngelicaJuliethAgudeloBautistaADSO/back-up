@@ -2,92 +2,97 @@
 package modelo;
 
 public class cliente {
-    //int id;
-    String nom;
-    String apell;
-    int document;
-    String email;
-    String genero;
-    String tipo;
-    long telef;
-    String contrasena;
-    public cliente() {
-    }
-
-    public cliente( String nom, String apell, int document, String email, String genero, String tipo, long telef, String contrasena) {
-        //this.id = id;
-        this.nom = nom;
-        this.apell = apell;
-        this.document = document;
-        this.email = email;
-        this.genero = genero;
-        this.tipo = tipo;
-        this.telef = telef;
+    private int id_cliente;
+    private String nom_cliente;
+    private String apell_cliente;
+    private int document_cliente;
+    private String email_cliente;
+    private String genero_cliente;
+    private String tipo_cliente;
+    private long telef_cliente;
+    private String contrasena;
+    private boolean Estado;
+    private Rol Rol; 
+    public cliente(int id_cliente,String nom_cliente, String apell_cliente, int document_cliente, String email_cliente, String genero_cliente, String tipo_cliente, long telef_cliente, String contrasena, boolean Estado, Rol Rol) {
+        this.id_cliente = id_cliente;
+        this.nom_cliente = nom_cliente;
+        this.apell_cliente = apell_cliente;
+        this.document_cliente = document_cliente;
+        this.email_cliente = email_cliente;
+        this.genero_cliente = genero_cliente;
+        this.tipo_cliente = tipo_cliente;
+        this.telef_cliente = telef_cliente;
         this.contrasena = contrasena;
+        this.Estado = Estado;
+        this.Rol = Rol;
     }
 
-   // public int getId() {
-     //   return id;
-    //}
-
-    //public void setId(int id) {
-    //    this.id = id;
-    //}
-
-    public String getNom() {
-        return nom;
+    public cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public int getId_cliente() {
+        return id_cliente;
     }
 
-    public String getApell() {
-        return apell;
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
-    public void setApell(String apell) {
-        this.apell = apell;
+    public String getNom_cliente() {
+        return nom_cliente;
     }
 
-    public int getDocument() {
-        return document;
+    public void setNom_cliente(String nom_cliente) {
+        this.nom_cliente = nom_cliente;
     }
 
-    public void setDocument(int document) {
-        this.document = document;
+    public String getApell_cliente() {
+        return apell_cliente;
     }
 
-    public String getEmail() {
-        return email;
+    public void setApell_cliente(String apell_cliente) {
+        this.apell_cliente = apell_cliente;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public int getDocument_cliente() {
+        return document_cliente;
     }
 
-    public String getGenero() {
-        return genero;
+    public void setDocument_cliente(int document_cliente) {
+        this.document_cliente = document_cliente;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public String getEmail_cliente() {
+        return email_cliente;
     }
 
-    public String getTipo() {
-        return tipo;
+    public void setEmail_cliente(String email_cliente) {
+        this.email_cliente = email_cliente;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public String getGenero_cliente() {
+        return genero_cliente;
     }
 
-    public long getTelef() {
-        return telef;
+    public void setGenero_cliente(String genero_cliente) {
+        this.genero_cliente = genero_cliente;
     }
 
-    public void setTelef(long telef) {
-        this.telef = telef;
+    public String getTipo_cliente() {
+        return tipo_cliente;
+    }
+
+    public void setTipo_cliente(String tipo_cliente) {
+        this.tipo_cliente = tipo_cliente;
+    }
+
+    public long getTelef_cliente() {
+        return telef_cliente;
+    }
+
+    public void setTelef_cliente(long telef_cliente) {
+        this.telef_cliente = telef_cliente;
     }
 
     public String getContrasena() {
@@ -97,5 +102,22 @@ public class cliente {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+
+    public boolean isEstado() {
+        return Estado;
+    }
+
+    public void setEstado(boolean Estado) {
+        this.Estado = Estado;
+    }
+
+    public Rol getRol() {
+        return Rol;
+    }
+
+    public void setRol(Rol Rol) {
+        this.Rol = Rol;
+    }
+    
     
 }

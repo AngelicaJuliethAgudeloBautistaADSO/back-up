@@ -20,12 +20,12 @@ public class Conexion {
         }
     }
         //public static void main(String[]args){
-           // Conexion conexion = new Conexion();
-           // if (conexion.getConnection() != null) {
-           // System.out.println("Conexión a la base de datos exitosa.");
-           // } else {
-          //      System.out.println("Error al conectar a la base de datos.");
-   // }
+        //    Conexion conexion = new Conexion();
+        //    if (conexion.getConnection() != null) {
+        //    System.out.println("Conexión a la base de datos exitosa.");
+        //    } else {
+        //    System.out.println("Error al conectar a la base de datos.");
+  //}
       //  }
             //llamada al metodo conectarDB() para que se pueda establecer en la base de datos
             //Connection bd= conectarDB();

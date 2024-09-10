@@ -44,6 +44,9 @@
             </div>
         </div>
         
+        
+        <a href="controlAdminUsuario?accion=listar">ususususu</a>
+        
     </section>
 </body>
 </html>

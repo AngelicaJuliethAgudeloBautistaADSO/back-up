@@ -1,4 +1,3 @@
-
 package controlador;
 
 import java.io.IOException;
@@ -15,7 +14,7 @@ import modeloDAO.clienteDAO;
 @WebServlet(name = "control_admin_usuario", urlPatterns = {"/control_admin_usuario"})
 public class controlAdminUsuario extends HttpServlet {
 
-    String listar="panel_admin/panel_usuarios_admin.jsp";
+    String listar="panel_admin/carpetica/panel_usuarios_admin.jsp";
     String add="vistas/add.jsp";
     String edit="vistas/edit.jsp";
     cliente c =new cliente();//se instancia la clase cliente
@@ -63,13 +62,13 @@ public class controlAdminUsuario extends HttpServlet {
                 int document = Integer.parseInt(documentSTR);
                 int telef = Integer.parseInt(telefSTR);
                 
-                c.setNom(nom);
-                c.setApell(apell);
-                c.setTipo(tipo);
-                c.setDocument(document);
-                c.setGenero(genero);
-                c.setTelef(telef);
-                c.setEmail(email);
+                c.setNom_cliente(nom);
+                c.setApell_cliente(apell);
+                c.setTipo_cliente(tipo);
+                c.setDocument_cliente(document);
+                c.setGenero_cliente(genero);
+                c.setTelef_cliente(telef);
+                c.setEmail_cliente(email);
                 c.setContrasena(contrasena);
                 dao.add(c);
                 

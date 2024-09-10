@@ -13,8 +13,8 @@
         <servlet-class>controlador.Guardar</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>controladorAdminUsuario</servlet-name>
-        <servlet-class>controlador.controladorAdminUsuario</servlet-class>
+        <servlet-name>controlAdminUsuario</servlet-name>
+        <servlet-class>controlador.controlAdminUsuario</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>controlCosmetolo</servlet-name>
@@ -23,6 +23,10 @@
     <servlet>
         <servlet-name>contolUsuario</servlet-name>
         <servlet-class>controlador.contolUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>unu</servlet-name>
+        <servlet-class>controlador.unu</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>controlador</servlet-name>
@@ -37,8 +41,8 @@
         <url-pattern>/GuardarRegistro</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>controladorAdminUsuario</servlet-name>
-        <url-pattern>/adminUserPath</url-pattern>
+        <servlet-name>controlAdminUsuario</servlet-name>
+        <url-pattern>/controlAdminUsuario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>controlCosmetolo</servlet-name>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>contolUsuario</servlet-name>
         <url-pattern>/contolUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>unu</servlet-name>
+        <url-pattern>/unu</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

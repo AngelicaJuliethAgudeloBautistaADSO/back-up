@@ -40,8 +40,9 @@ public class contolUsuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String acceso="";
+            String acceso="";
             String action=request.getParameter("accion");
+            
             if (action.equalsIgnoreCase("listar")) {
                 acceso=listar;
             }else if (action.equalsIgnoreCase("add")){
@@ -61,13 +62,13 @@ public class contolUsuario extends HttpServlet {
                 int document = Integer.parseInt(documentSTR);
                 int telef = Integer.parseInt(telefSTR);
                 
-                c.setNom(nom);
-                c.setApell(apell);
-                c.setTipo(tipo);
-                c.setDocument(document);
-                c.setGenero(genero);
-                c.setTelef(telef);
-                c.setEmail(email);
+                c.setNom_cliente(nom);
+                c.setApell_cliente(apell);
+                c.setTipo_cliente(tipo);
+                c.setDocument_cliente(document);
+                c.setGenero_cliente(genero);
+                c.setTelef_cliente(telef);
+                c.setEmail_cliente(email);
                 c.setContrasena(contrasena);
                 dao.add(c);
                 

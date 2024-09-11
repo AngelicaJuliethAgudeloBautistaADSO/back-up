@@ -61,6 +61,7 @@
                                 <th class="th_tabla">Id</th>
                                 <th class="th_tabla">Nombre</th>
                                 <th class="th_tabla">Apellido</th>
+                                <th class="th_tabla">Tipo</th>
                                 <th class="th_tabla">Documento</th>
                                 <th class="th_tabla">Genero</th>
                                 <th class="th_tabla">Telefono</th>
@@ -71,30 +72,28 @@
                         
                         
                         <tbody>
-                        <%
-                        clienteDAO dao=new clienteDAO();
-                        List<cliente>list=dao.listar();
-                        Iterator<cliente> iter = list.iterator();
-                        cliente clie = null;
-                        while (iter.hasNext()){                        
-                        clie = iter.next();                        
-                        %>
-                            <tr>
-                                <td class="th_tabla"><%= clie.getNom()%></td>
-                                <td class="th_tabla"><%= clie.getApell()%></td>
-                                <td class="th_tabla"><%= clie.getDocument()%></td>
-                                <td class="th_tabla"><%= clie.getGenero()%></td>
-                                <td class="th_tabla"><%= clie.getTelef()%></td>
-                                <td class="th_tabla"><%= clie.getEmail()%></td>
-                                <td class="th_tabla">
-                                    <div class="boton_modif_elim">
-                                        <a class="modificar">Modificar</a>
-                                        <a class="eliminar">Eliminar</a>
-                                    </div>
-                                </td>
-                            </tr>
-                        <%}%>
-                        </tbody>
+                <%
+                    List<cliente> lista = (List<cliente>) request.getAttribute("clientes");
+                    for (cliente cliente : lista) {
+                %>
+                <tr>
+                    <td><%= cliente.getId_cliente() %></td>
+                    <td><%= cliente.getNom_cliente() %></td>
+                    <td><%= cliente.getApell_cliente() %></td>
+                    <td><%= cliente.getTipo_cliente() %></td>
+                    <td><%= cliente.getDocument_cliente() %></td>
+                    <td><%= cliente.getGenero_cliente() %></td>
+                    <td><%= cliente.getTelef_cliente() %></td>
+                    <td><%= cliente.getEmail_cliente() %></td>
+                    <td>
+                        <a href="controlAdminUsuario?accion=editar&id=<%= cliente.getId_cliente() %>">Editar</a>
+                        <a href="controlAdminUsuario?accion=eliminar&id=<%= cliente.getId_cliente() %>">Eliminar</a>
+                    </td>
+                </tr>
+                <%
+                    }
+                %>
+            </tbody>
                     </table>
                 </div>
             </div>

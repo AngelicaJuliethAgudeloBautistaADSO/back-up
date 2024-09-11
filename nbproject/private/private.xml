@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/back-up/web/registro.jsp</file>
-            <file>file:/D:/back-up/src/java/modeloDAO/clienteDAO.java</file>
-            <file>file:/D:/back-up/src/java/controlador/controlAdminUsuario.java</file>
+            <file>file:/D:/backend/back-up/src/java/controlador/controlAdminUsuario.java</file>
+            <file>file:/D:/backend/back-up/src/java/modelo/cliente.java</file>
+            <file>file:/D:/backend/back-up/web/panel_admin/usuarios_admin/panel_usuarios_admin.jsp</file>
+            <file>file:/D:/backend/back-up/src/java/interfaces/CRUD.java</file>
+            <file>file:/D:/backend/back-up/web/panel_admin/inicio_admin/panel_inicio_admin.jsp</file>
+            <file>file:/D:/backend/back-up/src/java/modeloDAO/clienteDAO.java</file>
+            <file>file:/D:/backend/back-up/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>

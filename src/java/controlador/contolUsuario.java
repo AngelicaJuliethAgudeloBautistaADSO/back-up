@@ -67,10 +67,9 @@ public class contolUsuario extends HttpServlet {
                 c.setTipo_cliente(tipo);
                 c.setDocument_cliente(document);
                 c.setGenero_cliente(genero);
-                c.setTelef_cliente(telef);
+                c.setTelef_cliente(telefSTR);
                 c.setEmail_cliente(email);
                 c.setContrasena(contrasena);
-                dao.add(c);
                 
                 acceso=listar;
             }
